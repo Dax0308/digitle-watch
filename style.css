@@ -1,0 +1,49 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: black;
+    color: limegreen;
+    font-family: Arial, sans-serif;
+    flex-direction: column;
+}
+.clock-container {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.8);
+    animation: glow 1.5s infinite alternate;
+}
+.clock, .date {
+    font-size: 50px;
+    font-weight: bold;
+    animation: pulse 2s infinite alternate;
+}
+.date {
+    font-size: 30px;
+    margin-top: 10px;
+}
+@keyframes glow {
+    from {
+        box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+    }
+    to {
+        box-shadow: 0 0 30px rgba(0, 255, 0, 1);
+    }
+}
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        text-shadow: 0 0 5px rgba(0, 255, 0, 0.3);
+    }
+    50% {
+        transform: scale(1.02);
+        text-shadow: 0 0 10px rgba(0, 255, 0, 0.8);
+    }
+    100% {
+        transform: scale(1);
+        text-shadow: 0 0 5px rgba(0, 255, 0, 0.3);
+    }
+}
